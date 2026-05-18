@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-violetAura: #7c3aed;
+  --color-violetDeep: #5b21b6;
+  --color-night: #1a1025;
+  --color-nightSoft: #2a1f3d;
+  --color-textGlow: #f3e8ff;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(124, 58, 237, 0.32), transparent 32%),
+    radial-gradient(circle at 86% 2%, rgba(109, 40, 217, 0.25), transparent 26%),
+    linear-gradient(180deg, #1a1025 0%, #120a1b 100%);
+  color: #f3e8ff;
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.45);
+  color: #f3e8ff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Cards / superficies */
+.surface {
+  border-radius: 1rem;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  background-color: rgba(42, 31, 61, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+.soft-glow {
+  box-shadow:
+    0 0 0 1px rgba(124, 58, 237, 0.2),
+    0 24px 50px -28px rgba(124, 58, 237, 0.8);
+}
+
+/* Botones */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  background-color: #7c3aed;
+  color: #f3e8ff;
+}
+
+.btn-primary:hover {
+  background-color: #5b21b6;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid rgba(124, 58, 237, 0.6);
+  color: #f3e8ff;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(124, 58, 237, 0.2);
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  background-color: rgba(26, 16, 37, 0.8);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #f3e8ff;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.4);
+}
+
+/* Datepicker (react-day-picker) */
+.rdp-root {
+  --rdp-accent-color: #7c3aed;
+  --rdp-accent-background-color: rgba(124, 58, 237, 0.24);
+  --rdp-day_button-border-radius: 10px;
+}
+
+/* Scrollbar (webkits) */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.45);
+  border-radius: 999px;
+}
